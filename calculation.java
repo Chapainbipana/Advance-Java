@@ -5,7 +5,7 @@ import java.awt.event.*;
 	 int c,n;
 	 String s1,s2,s3,s4,s5;
 	 TextField t1;
-	 Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16;
+	 Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17;
 	 calculation(){
          t1=new TextField();
           t1.setBounds(20,30,170,20);
@@ -38,9 +38,12 @@ import java.awt.event.*;
 		  b14 = new Button("/");  
           b14.setBounds(80, 220, 50, 30); 
 		   b15= new Button("=");  
-          b15.setBounds(140, 220, 50, 30); 
+          b15.setBounds(80, 260, 110, 30); 
 		  b16=new Button("C");
 		  b16.setBounds(20,260,50,30);
+		  
+		   b17=new Button("00");
+		  b17.setBounds(140,220,50,30);
 		  
 		   
 		     add(t1);
@@ -56,11 +59,12 @@ import java.awt.event.*;
 			 add(b10);
 			 add(b11);
 			 add(b12);
-			  add(b13);
+			 add(b13);
 			 add(b14);
 			 add(b15);
 			 add(b16);
-			 
+			 add(b17);
+			
 			 b1.addActionListener(this);
              b2.addActionListener(this);
              b3.addActionListener(this);
@@ -77,7 +81,8 @@ import java.awt.event.*;
              b14.addActionListener(this);
              b15.addActionListener(this);
 			 b16.addActionListener(this);
-		
+			 b17.addActionListener(this);
+			
          	setSize(300,300);
             setLayout(null);
             setVisible(true);			
@@ -144,6 +149,13 @@ import java.awt.event.*;
 			s5=s3+s4;
 			t1.setText(s5);
 	      }
+		    if(e.getSource()==b17){
+	        s3=t1.getText();
+			s4="00";
+			s5=s3+s4;
+			t1.setText(s5);
+	      }
+		   
 		 if(e.getSource()==b11){
 	        s1=t1.getText();
 			t1.setText("");
