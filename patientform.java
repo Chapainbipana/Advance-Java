@@ -6,8 +6,8 @@ public class patientform{
     JLabel namel,addressl,gender,provence,bloodl,visited,phonel,emaill,aboutl;
     JTextField namet,addresst,phonet,emailt;
     JRadioButton female,male,others;
-    //JComboBox pro;
-    //JList bl;
+    JComboBox pro;
+    JList bl;
     JCheckBox Radiotherapy,Physiotherapy,Pharmacy;
     JTextArea about;
     patientform(){
@@ -65,11 +65,11 @@ public class patientform{
           Physiotherapy.setBounds(160, 400,  110, 30);  
  		  Pharmacy= new JCheckBox("Pharmacy");    
           Pharmacy.setBounds(270, 400,  100, 30); 
-         /* ButtonGroup g2=new ButtonGroup();
+         ButtonGroup g2=new ButtonGroup();
           g2.add(Radiotherapy);
           g2.add(Physiotherapy);
           g2.add(Pharmacy);
-           */
+           
         f.add(namel);
         f.add(namet);
         f.add(addressl);
